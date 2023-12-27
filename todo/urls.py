@@ -2,7 +2,7 @@ from django.urls import path
 from .views import TodoListApi, TodoDetailApi, TodoCreateApi, TodoDeleteApi, TodoListCompletedApi
 
 urlpatterns = [
-    path('', TodoListApi.as_view()),
+    path('current/', TodoListApi.as_view()),
     path('completed/', TodoListCompletedApi.as_view()),
     path('<int:pk>/', TodoDetailApi.as_view()),
     path('create/', TodoCreateApi.as_view()),
